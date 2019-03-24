@@ -6,9 +6,10 @@
 
 #search {
     display: flex;
+    background: #0000000a;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 89vh;
 }
 
 .lets-go {
@@ -20,4 +21,37 @@
 
 .search-bar {
     display: table-cell;
+}
+
+.nav-bar {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    background: #0000000a;
+}
+
+.nav-bar-logo {
+    cursor: pointer;
+    height: 35px;
+    margin: 20px;
+}
+
+.nav-bar-right {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    height: 80px;
+    align-items: center;
+}
+
+.nav-right-item {
+    padding: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-right-item:hover {
+    cursor: pointer;
+    transition: .1s ease-in-out all;
+    border-bottom: 2px solid white;
 }
