@@ -1,3 +1,12 @@
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -6,6 +15,7 @@
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 10;
+  animation:fadein .5s;
 }
 
 .modal-child {
@@ -13,4 +23,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
 }

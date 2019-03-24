@@ -52,6 +52,6 @@
 
 .nav-right-item:hover {
     cursor: pointer;
-    transition: .1s ease-in-out all;
+    transition: .3s ease-in-out all;
     border-bottom: 2px solid white;
 }
