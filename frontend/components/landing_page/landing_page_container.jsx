@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 import LandingPage from './landing_page';
+import { openModal } from '../../actions/modal_actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     return ({
     })
 };
 
 const mapDispatchToProps = dispatch => {
     return ({
+        openModal: formType => dispatch(openModal(formType))
     })
 };
 

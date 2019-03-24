@@ -5,6 +5,11 @@ class LandingPage extends React.Component {
 render(){
     return(
       <div id="landing">
+        <div className="nav-bar">
+          <p onClick={() => this.props.openModal('signup')}>
+            Signup
+          </p>
+        </div>
         <div id="search">
           <div className="content">
             <span className="lets-go">Let's Go</span>
