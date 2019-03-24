@@ -1,0 +1,19 @@
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('landing.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.lets-go {
+    font-size: 51px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar {
+    display: table-cell;
+}
