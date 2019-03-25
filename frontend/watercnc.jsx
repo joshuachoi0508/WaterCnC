@@ -24,9 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
         <Root store={store} />,
         root
     )
-
-    // ReactDOM.render(
-    //     <h1>Welcome to WaterCnC</h1>, 
-    //     root
-    // )
 })

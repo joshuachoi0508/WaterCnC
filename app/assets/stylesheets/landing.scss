@@ -14,6 +14,7 @@
 
 .lets-go {
     font-size: 51px;
+    margin-bottom: 15px;
     font-weight: bold;
     color: white;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
@@ -55,4 +56,66 @@
     cursor: pointer;
     transition: .3s ease-in-out all;
     border-bottom: 2px solid white;
+}
+
+.splash-dates-text {
+    background: white;
+    font-weight: 300;
+    padding: 0 8px 0 8px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    height: 41px;
+    padding: 15px;
+    background: white;
+    width: 263px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 100px;
+}
+
+.search-options {
+    display: flex;
+}
+
+.location-picker {
+    display: flex;
+    flex-direction: column;
+    height: 41px;
+    padding: 15px;
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: 1px solid #ebebeb;
+}
+
+.splash-location-text {
+    background: white;
+    font-weight: 300;
+    padding: 0 8px 0 8px;
+}
+
+.location-search-input {
+    border: white;
+    color: #484848;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: .2px;
+    padding: 7px 7px 5px;
+    width: 400px;
+}
+
+.autocomplete-dropdown-container {
+    position: absolute;
+    right: 294px;
+    width: 444px;
+    background: white;
+    margin-top: 6px;
 }

@@ -72,9 +72,13 @@
 }
 
 .session-errors {
-list-style: none;
+    list-style: none;
     color: #D93900;
     left: 9px;
     padding: 5px 0 5px 0;
     position: relative;
+}
+
+.close-x {
+    cursor: pointer;
 }
