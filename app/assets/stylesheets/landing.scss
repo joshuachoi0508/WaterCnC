@@ -2,11 +2,11 @@
     background-image: url(landing.jpg);
     background-size: cover;
     height: 100vh;
+    min-width: 950px;
 }
 
 #search {
     display: flex;
-    background: #0000000a;
     justify-content: center;
     align-items: center;
     height: 89vh;
@@ -29,7 +29,6 @@
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    background: #0000000a;
 }
 
 .nav-bar-logo {
@@ -70,7 +69,8 @@
     height: 41px;
     padding: 15px;
     background: white;
-    width: 263px;
+    width: 250px;
+    border-right: 1px solid #ebebeb;
 }
 
 .content {
@@ -109,18 +109,19 @@
     line-height: 18px;
     letter-spacing: .2px;
     padding: 7px 7px 5px;
-    width: 400px;
+    width: 350px;
 }
 
 .autocomplete-dropdown-container {
-    position: absolute;
-    right: 294px;
-    width: 444px;
+    position: relative;
+    width: 400px;
     background: white;
     color: #484848;
     font-weight: 500;
     font-size: 12px;
     margin-top: 6px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .locaiton-pointer {
@@ -131,4 +132,78 @@
 .search-result {
     display: flex;
     align-items: center;
+}
+
+.guest-picker {
+    display: flex;
+    flex-direction: column;
+    height: 41px;
+    padding: 15px;
+    background: white;
+    width: 170px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.num-guest-show {
+    width: 170px;
+    height: 170px;
+}
+
+.splash-guest-text {
+    background: white;
+    font-weight: 300;
+    padding: 0 8px 0 8px;
+}
+
+.guest-botton-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.guest-button {
+    border: none;
+    color: #757581;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: .2px;
+    padding: 7px 7px 5px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    cursor: pointer;
+}
+
+#num-guest-show {
+    position: absolute;
+    top: 133px;
+    right: 0px;
+    width: 196px;
+    padding: 2px;
+    height: 60px;
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 300;
+}
+
+#num-guest-hide {
+    display: none;
+}
+
+.guest-count-button {
+    cursor: pointer;
+    color: #008489;
+    border: 1px solid #008489;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+}
+
+.guest-count-button:disabled {
+    opacity: 0.5;
 }
