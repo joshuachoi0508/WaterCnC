@@ -100,9 +100,7 @@ class LandingPage extends React.Component {
                                     style,
                                   })}
                                 > 
-                                  <span 
-                                    onClick={(e) => this.handleChange(e.currentTarget.innerText)}
-                                  >
+                                  <span>
                                     {suggestion.description}
                                   </span>
                                 </div>
