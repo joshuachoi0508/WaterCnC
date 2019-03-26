@@ -100,7 +100,8 @@ class LandingPage extends React.Component {
                                     style,
                                   })}
                                 > 
-                                  <span>
+                                  <span className="search-result">
+                                    <img className="locaiton-pointer" src={window.images.location_pointer}></img>
                                     {suggestion.description}
                                   </span>
                                 </div>

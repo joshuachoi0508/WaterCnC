@@ -117,5 +117,18 @@
     right: 294px;
     width: 444px;
     background: white;
+    color: #484848;
+    font-weight: 500;
+    font-size: 12px;
     margin-top: 6px;
+}
+
+.locaiton-pointer {
+    margin: 5px 15px 5px 10px;
+    height: 25px;
+}
+
+.search-result {
+    display: flex;
+    align-items: center;
 }
