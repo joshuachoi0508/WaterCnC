@@ -11,6 +11,8 @@ class CreateListings < ActiveRecord::Migration[5.2]
       t.float :longitude, null: false
       t.integer :num_rooms, null: false
       t.integer :num_bathrooms, null: false
+      t.integer :num_guests, null: false
+      t.integer :num_beds, null: false
       t.integer :price, null: false
       t.text :description, null: false
       
