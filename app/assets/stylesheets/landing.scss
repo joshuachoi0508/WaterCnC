@@ -2,14 +2,14 @@
     background-image: url(landing.jpg);
     background-size: cover;
     height: 100vh;
-    min-width: 950px;
+    min-width: 1010px;
 }
 
 #search {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 89vh;
+    height: 88vh;
 }
 
 .lets-go {
@@ -178,7 +178,7 @@
 #num-guest-show {
     position: absolute;
     top: 133px;
-    right: 0px;
+    right: 79px;
     width: 196px;
     padding: 2px;
     height: 60px;
@@ -206,4 +206,19 @@
 
 .guest-count-button:disabled {
     opacity: 0.5;
+}
+
+.search-button-container {
+    width: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff5a5f;
+    border-radius: 10px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.search-button {
+    width: 40px;
 }

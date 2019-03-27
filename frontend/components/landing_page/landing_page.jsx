@@ -3,10 +3,7 @@ import { DateRangePicker } from 'react-dates';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import PlacesAutocomplete from 'react-places-autocomplete';
-import {
-  geocodeByAddress,
-  getLatLng,
-} from 'react-places-autocomplete';
+import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import NavBar from './nav_bar';
 
 class LandingPage extends Component {
@@ -27,6 +24,8 @@ class LandingPage extends Component {
     this.handleSelect = this.handleSelect.bind(this);
     this.renderGuests = this.renderGuests.bind(this);
     this.disableGuests = this.disableGuests.bind(this);
+    this.increaseGuestCount = this.increaseGuestCount.bind(this);
+    this.decreaseGuestCount = this.decreaseGuestCount.bind(this);
   }
 
   componentDidMount(){
@@ -53,7 +52,6 @@ class LandingPage extends Component {
   }
 
   disableGuests(e) {
-    debugger;
     if ((e.target.id === "search" || e.target.className === "lets-go") && this.state.renderGuest === 'num-guest-show') {
       this.setState({['renderGuest']: 'num-guest-hide'})
     }
@@ -71,8 +69,21 @@ class LandingPage extends Component {
     if (this.state.numGuests === 1) {
       return (<button disabled={true} className="guest-count-button disabled">-</button>)
     } else {
-      return (<button className="guest-count-button">-</button>)
+      return (<button 
+        className="guest-count-button"
+        onClick={this.decreaseGuestCount}
+        >-</button>)
     }
+  }
+
+  increaseGuestCount(){
+    const initialCount = this.state.numGuests;
+    this.setState({numGuests: initialCount + 1});
+  }
+
+  decreaseGuestCount() {
+    const initialCount = this.state.numGuests;
+    this.setState({ numGuests: initialCount - 1 });
   }
 
   render(){
@@ -151,8 +162,8 @@ class LandingPage extends Component {
                     <span>DATE</span>
                   </div>
                   <DateRangePicker
-                    startDateId="splashStartDate"
-                    endDateId="splashEndDate"
+                    startDateId="landingStartDate"
+                    endDateId="landingEndDate"
                     startDate={this.state.startDate}
                     endDate={this.state.endDate}
                     onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate }); }}
@@ -182,8 +193,14 @@ class LandingPage extends Component {
                     <p>Guests</p>
                     {this.renderMinusButton()}
                           {this.state.numGuests}
-                    <button className="guest-count-button">+</button>
+                    <button 
+                      className="guest-count-button"
+                      onClick={this.increaseGuestCount}
+                    >+</button>
                   </div>
+                </div>
+                <div className="search-button-container">
+                  <img className="search-button" src={window.images.search_logo}></img>
                 </div>
               </div>
             </div>
