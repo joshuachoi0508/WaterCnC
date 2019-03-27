@@ -21,4 +21,5 @@ class CreateListings < ActiveRecord::Migration[5.2]
 
     add_index :listings, :owner_id
     add_index :listings, :city
+  end
 end

@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_24_022413) do
+ActiveRecord::Schema.define(version: 2019_03_27_020834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "listing_id", null: false
+    t.integer "renter_id", null: false
+    t.integer "num_guests", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["listing_id"], name: "index_bookings_on_listing_id"
+    t.index ["renter_id"], name: "index_bookings_on_renter_id"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.integer "owner_id", null: false
+    t.string "title", null: false
+    t.string "address", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.integer "zip_code", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.integer "num_rooms", null: false
+    t.integer "num_bathrooms", null: false
+    t.integer "num_guests", null: false
+    t.integer "num_beds", null: false
+    t.integer "price", null: false
+    t.text "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city"], name: "index_listings_on_city"
+    t.index ["owner_id"], name: "index_listings_on_owner_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "listing_id", null: false
+    t.integer "user_id", null: false
+    t.text "body", null: false
+    t.integer "num_stars", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["listing_id"], name: "index_reviews_on_listing_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
