@@ -11,7 +11,7 @@
     "jquery": "^1.9.1",
     "moment": "^2.24.0",
     "react": "^16.8.5",
-    "react-dates": "^20.1.0",
+    "react-dates": "^18.4.0",
     "react-dom": "^16.8.5",
     "react-places-autocomplete": "^7.2.1",
     "react-redux": "^6.0.1",
